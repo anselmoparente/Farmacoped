@@ -1,4 +1,4 @@
-import 'package:farmacoped/home_page.dart';
+import 'package:farmacoped/ui/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
