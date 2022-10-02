@@ -8,6 +8,8 @@ class MainPage extends GetView<MainController> {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const Scaffold(
+      backgroundColor: Colors.white,
+    );
   }
 }

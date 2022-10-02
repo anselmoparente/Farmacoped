@@ -1,13 +1,12 @@
-import 'dart:developer';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import 'package:farmacoped/routes/app_pages.dart';
 import 'package:farmacoped/ui/tutorial_page/widgets/first_page.dart';
 import 'package:farmacoped/ui/tutorial_page/widgets/second_page.dart';
 import 'package:farmacoped/ui/tutorial_page/widgets/third_page.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
 import 'package:farmacoped/controllers/tutorial_controller.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class TutorialPage extends GetView<TutorialController> {
   const TutorialPage({super.key});
@@ -28,7 +27,6 @@ class TutorialPage extends GetView<TutorialController> {
               controller: pageController,
               onPageChanged: (int? page) {
                 controller.currentPage = page!;
-                log(controller.currentPage.toString());
               },
               children: const [
                 FirstPage(),
@@ -55,7 +53,7 @@ class TutorialPage extends GetView<TutorialController> {
                 padding: const EdgeInsets.all(16.0),
                 child: TextButton(
                   onPressed: () {
-                    log(pageController.page.toString());
+                    Get.offAndToNamed(Routes.MAIN);
                   },
                   child: Obx(
                     () => Text(
