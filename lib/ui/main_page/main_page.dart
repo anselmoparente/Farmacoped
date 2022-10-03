@@ -1,3 +1,4 @@
+import 'package:farmacoped/ui/downloaded_medication/downloaded_medication.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -8,8 +9,22 @@ class MainPage extends GetView<MainController> {
 
   @override
   Widget build(BuildContext context) {
+    final PageController pageController = PageController();
+
     return Scaffold(
       backgroundColor: Colors.white,
+      body: PageView(
+        controller: pageController,
+        physics: const NeverScrollableScrollPhysics(),
+        children: [
+          Container(),
+          Container(),
+          const DownloadedMedication(),
+          Container(),
+          Container(),
+        ],
+        
+      ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
         child: Container(
@@ -39,6 +54,7 @@ class MainPage extends GetView<MainController> {
                     onPressed: () {
                       if (controller.currentPage != 0) {
                         controller.currentPage = 0;
+                        pageController.jumpToPage(0);
                       }
                     },
                     color: controller.currentPage == 0
@@ -50,6 +66,7 @@ class MainPage extends GetView<MainController> {
                     onPressed: () {
                       if (controller.currentPage != 1) {
                         controller.currentPage = 1;
+                        pageController.jumpToPage(1);
                       }
                     },
                     color: controller.currentPage == 1
@@ -61,6 +78,7 @@ class MainPage extends GetView<MainController> {
                     onPressed: () {
                       if (controller.currentPage != 2) {
                         controller.currentPage = 2;
+                        pageController.jumpToPage(2);
                       }
                     },
                     color: controller.currentPage == 2
@@ -72,6 +90,7 @@ class MainPage extends GetView<MainController> {
                     onPressed: () {
                       if (controller.currentPage != 3) {
                         controller.currentPage = 3;
+                        pageController.jumpToPage(3);
                       }
                     },
                     color: controller.currentPage == 3
@@ -83,6 +102,7 @@ class MainPage extends GetView<MainController> {
                     onPressed: () {
                       if (controller.currentPage != 4) {
                         controller.currentPage = 4;
+                        pageController.jumpToPage(4);
                       }
                     },
                     color: controller.currentPage == 4
