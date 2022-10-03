@@ -55,6 +55,9 @@ class TutorialPage extends GetView<TutorialController> {
                   onPressed: () {
                     Get.offAndToNamed(Routes.MAIN);
                   },
+                  style: const ButtonStyle(
+                      overlayColor:
+                          MaterialStatePropertyAll<Color>(Colors.transparent)),
                   child: Obx(
                     () => Text(
                       controller.currentPage == 2
