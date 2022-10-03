@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       ),
       locale: Get.deviceLocale,
       getPages: AppPages.pages,
-      initialRoute: Routes.TUTORIAL,
+      initialRoute: Routes.SPLASH,
       initialBinding: TutorialBinding(),
       translations: AppTranslations(),
       translationsKeys: AppTranslations().keys,

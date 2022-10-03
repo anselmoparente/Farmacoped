@@ -18,7 +18,7 @@ class TutorialPage extends GetView<TutorialController> {
     );
 
     return Scaffold(
-      backgroundColor: Colors.deepPurple[100],
+      backgroundColor: Colors.deepPurple[50],
       body: Column(
         children: [
           SizedBox(

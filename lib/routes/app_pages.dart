@@ -1,3 +1,4 @@
+import 'package:farmacoped/ui/splash_page/splash_page.dart';
 import 'package:get/get.dart';
 
 import 'package:farmacoped/ui/main_page/main_page.dart';
@@ -9,6 +10,10 @@ part 'app_routes.dart';
 
 abstract class AppPages {
   static final pages = [
+    GetPage(
+      name: Routes.SPLASH,
+      page: () => const SplashPage(),
+    ),
     GetPage(
       name: Routes.TUTORIAL,
       page: () => const TutorialPage(),

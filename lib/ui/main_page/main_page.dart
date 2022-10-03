@@ -11,12 +11,12 @@ class MainPage extends GetView<MainController> {
     return Scaffold(
       backgroundColor: Colors.white,
       bottomNavigationBar: Padding(
-        padding: EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
+        padding: const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
         child: Container(
           height: 56,
           width: Get.width,
           decoration: BoxDecoration(
-            color: Colors.purple[400],
+            color: Colors.purple[800],
             borderRadius: const BorderRadius.all(
               Radius.circular(48),
             ),
