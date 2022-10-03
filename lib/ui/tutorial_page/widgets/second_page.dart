@@ -10,10 +10,10 @@ class SecondPage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text('mark_the_favorites'.tr),
-        Container(
-          height: 250,
-          width: 250,
-          color: Colors.red,
+        Image.asset(
+          'assets/images/tutorial_icon_2.png',
+          height: Get.width * 0.9,
+          width: Get.width * 0.9,
         ),
         Text('save_your_most_important_medications_to_favorites'.tr),
       ],

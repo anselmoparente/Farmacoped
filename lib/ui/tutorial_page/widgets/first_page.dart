@@ -10,10 +10,10 @@ class FirstPage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text('your_portable_leaflet'.tr),
-        Container(
-          height: 250,
-          width: 250,
-          color: Colors.red,
+        Image.asset(
+          'assets/images/tutorial_icon_1.png',
+          height: Get.width * 0.9,
+          width: Get.width * 0.9,
         ),
         Text('find_key_information_about_your_medication'.tr),
       ],

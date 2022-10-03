@@ -10,10 +10,10 @@ class ThirdPage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text('offline_access'.tr),
-        Container(
-          height: 250,
-          width: 250,
-          color: Colors.red,
+        Image.asset(
+          'assets/images/tutorial_icon_3.png',
+          height: Get.width * 0.9,
+          width: Get.width * 0.9,
         ),
         Text('download_prescriptions'.tr),
       ],
