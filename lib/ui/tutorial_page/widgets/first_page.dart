@@ -9,13 +9,27 @@ class FirstPage extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text('your_portable_leaflet'.tr),
+        Text(
+          'your_portable_leaflet'.tr,
+          style: TextStyle(
+            fontSize: 32,
+            fontWeight: FontWeight.bold,
+            color: Colors.indigo[900],
+          ),
+        ),
         Image.asset(
           'assets/images/tutorial_icon_1.png',
           height: Get.width * 0.9,
           width: Get.width * 0.9,
         ),
-        Text('find_key_information_about_your_medication'.tr),
+        Text(
+          'find_key_information_about_your_medication'.tr,
+          style: TextStyle(
+            fontSize: 22,
+            color: Colors.indigo[700],
+          ),
+          textAlign: TextAlign.center,
+        ),
       ],
     );
   }

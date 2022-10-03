@@ -9,13 +9,27 @@ class ThirdPage extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text('offline_access'.tr),
+        Text(
+          'offline_access'.tr,
+          style: TextStyle(
+            fontSize: 32,
+            fontWeight: FontWeight.bold,
+            color: Colors.indigo[900],
+          ),
+        ),
         Image.asset(
           'assets/images/tutorial_icon_3.png',
           height: Get.width * 0.9,
           width: Get.width * 0.9,
         ),
-        Text('download_prescriptions'.tr),
+        Text(
+          'download_prescriptions'.tr,
+          style: TextStyle(
+            fontSize: 22,
+            color: Colors.indigo[700],
+          ),
+          textAlign: TextAlign.center,
+        ),
       ],
     );
   }
