@@ -18,6 +18,8 @@ abstract class AppPages {
       name: Routes.TUTORIAL,
       page: () => const TutorialPage(),
       binding: TutorialBinding(),
+      transitionDuration: const Duration(milliseconds: 300),
+      transition: Transition.rightToLeft,
     ),
     GetPage(
       name: Routes.MAIN,
