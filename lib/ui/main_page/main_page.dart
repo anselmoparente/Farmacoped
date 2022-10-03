@@ -15,11 +15,19 @@ class MainPage extends GetView<MainController> {
         child: Container(
           height: 56,
           width: Get.width,
-          decoration: BoxDecoration(
-            color: Colors.purple[800],
-            borderRadius: const BorderRadius.all(
+          decoration: const BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.all(
               Radius.circular(48),
             ),
+            boxShadow: [
+              BoxShadow(
+                color: Color.fromARGB(255, 186, 186, 186),
+                blurRadius: 2.0,
+                spreadRadius: 2.0,
+                offset: Offset(0.0, 0.0),
+              )
+            ],
           ),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -34,7 +42,7 @@ class MainPage extends GetView<MainController> {
                       }
                     },
                     color: controller.currentPage == 0
-                        ? Colors.white
+                        ? Colors.deepPurple
                         : Colors.grey,
                     icon: const Icon(Icons.info_outline),
                   ),
@@ -45,7 +53,7 @@ class MainPage extends GetView<MainController> {
                       }
                     },
                     color: controller.currentPage == 1
-                        ? Colors.white
+                        ? Colors.deepPurple
                         : Colors.grey,
                     icon: const Icon(Icons.file_download_outlined),
                   ),
@@ -56,7 +64,7 @@ class MainPage extends GetView<MainController> {
                       }
                     },
                     color: controller.currentPage == 2
-                        ? Colors.white
+                        ? Colors.deepPurple
                         : Colors.grey,
                     icon: const Icon(Icons.search),
                   ),
@@ -67,7 +75,7 @@ class MainPage extends GetView<MainController> {
                       }
                     },
                     color: controller.currentPage == 3
-                        ? Colors.white
+                        ? Colors.deepPurple
                         : Colors.grey,
                     icon: const Icon(Icons.favorite_outline),
                   ),
@@ -78,7 +86,7 @@ class MainPage extends GetView<MainController> {
                       }
                     },
                     color: controller.currentPage == 4
-                        ? Colors.white
+                        ? Colors.deepPurple
                         : Colors.grey,
                     icon: const Icon(Icons.settings_outlined),
                   ),
