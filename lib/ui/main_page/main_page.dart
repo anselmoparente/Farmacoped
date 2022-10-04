@@ -23,7 +23,6 @@ class MainPage extends GetView<MainController> {
           Container(),
           Container(),
         ],
-        
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 8.0),
@@ -50,65 +49,100 @@ class MainPage extends GetView<MainController> {
               () => Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  IconButton(
+                  TextButton(
                     onPressed: () {
                       if (controller.currentPage != 0) {
                         controller.currentPage = 0;
                         pageController.jumpToPage(0);
                       }
                     },
-                    color: controller.currentPage == 0
-                        ? Colors.deepPurple
-                        : Colors.grey,
-                    icon: const Icon(Icons.info_outline),
+                    style: const ButtonStyle(
+                      overlayColor:
+                          MaterialStatePropertyAll<Color>(Colors.transparent),
+                    ),
+                    child: Icon(
+                      Icons.info_outline,
+                      size: 28,
+                      color: controller.currentPage == 0
+                          ? Colors.deepPurple
+                          : Colors.grey,
+                    ),
                   ),
-                  IconButton(
+                  TextButton(
                     onPressed: () {
                       if (controller.currentPage != 1) {
                         controller.currentPage = 1;
                         pageController.jumpToPage(1);
                       }
                     },
-                    color: controller.currentPage == 1
-                        ? Colors.deepPurple
-                        : Colors.grey,
-                    icon: const Icon(Icons.file_download_outlined),
+                    style: const ButtonStyle(
+                      overlayColor:
+                          MaterialStatePropertyAll<Color>(Colors.transparent),
+                    ),
+                    child: Icon(
+                      Icons.file_download_outlined,
+                      size: 28,
+                      color: controller.currentPage == 1
+                          ? Colors.deepPurple
+                          : Colors.grey,
+                    ),
                   ),
-                  IconButton(
+                  TextButton(
                     onPressed: () {
                       if (controller.currentPage != 2) {
                         controller.currentPage = 2;
                         pageController.jumpToPage(2);
                       }
                     },
-                    color: controller.currentPage == 2
-                        ? Colors.deepPurple
-                        : Colors.grey,
-                    icon: const Icon(Icons.search),
+                    style: const ButtonStyle(
+                      overlayColor:
+                          MaterialStatePropertyAll<Color>(Colors.transparent),
+                    ),
+                    child: Icon(
+                      Icons.search,
+                      size: 28,
+                      color: controller.currentPage == 2
+                          ? Colors.deepPurple
+                          : Colors.grey,
+                    ),
                   ),
-                  IconButton(
+                  TextButton(
                     onPressed: () {
                       if (controller.currentPage != 3) {
                         controller.currentPage = 3;
                         pageController.jumpToPage(3);
                       }
                     },
-                    color: controller.currentPage == 3
-                        ? Colors.deepPurple
-                        : Colors.grey,
-                    icon: const Icon(Icons.favorite_outline),
+                    style: const ButtonStyle(
+                      overlayColor:
+                          MaterialStatePropertyAll<Color>(Colors.transparent),
+                    ),
+                    child: Icon(
+                      Icons.favorite_outline,
+                      size: 28,
+                      color: controller.currentPage == 3
+                          ? Colors.deepPurple
+                          : Colors.grey,
+                    ),
                   ),
-                  IconButton(
+                  TextButton(
                     onPressed: () {
                       if (controller.currentPage != 4) {
                         controller.currentPage = 4;
                         pageController.jumpToPage(4);
                       }
                     },
-                    color: controller.currentPage == 4
-                        ? Colors.deepPurple
-                        : Colors.grey,
-                    icon: const Icon(Icons.settings_outlined),
+                    style: const ButtonStyle(
+                      overlayColor:
+                          MaterialStatePropertyAll<Color>(Colors.transparent),
+                    ),
+                    child: Icon(
+                      Icons.settings_outlined,
+                      size: 28,
+                      color: controller.currentPage == 4
+                          ? Colors.deepPurple
+                          : Colors.grey,
+                    ),
                   ),
                 ],
               ),
