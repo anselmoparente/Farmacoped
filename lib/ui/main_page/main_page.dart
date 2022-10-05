@@ -18,8 +18,8 @@ class MainPage extends GetView<MainController> {
         physics: const NeverScrollableScrollPhysics(),
         children: [
           Container(),
-          Container(),
           const DownloadedMedication(),
+          Container(),
           Container(),
           Container(),
         ],
