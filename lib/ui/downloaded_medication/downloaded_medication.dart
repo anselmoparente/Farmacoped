@@ -5,13 +5,11 @@ class DownloadedMedication extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        color: Colors.red,
-        height: 350,
-        width: 350,
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: const Text('Baixados'),
       ),
     );
   }
-
 }
