@@ -50,7 +50,7 @@ class TutorialPage extends GetView<TutorialController> {
                 ),
               ),
               Container(
-                padding: const EdgeInsets.all(16.0),
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: TextButton(
                   onPressed: () {
                     Get.offAndToNamed(Routes.MAIN);
