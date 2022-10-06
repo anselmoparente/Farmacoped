@@ -9,7 +9,7 @@ class DownloadedMedication extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Baixados'),
+        title: Text('downloaded'.tr),
         backgroundColor: Colors.deepPurple,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(

@@ -9,7 +9,7 @@ class FavoritePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Favoritos'),
+        title: Text('favorites'.tr),
         backgroundColor: Colors.deepPurple,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(

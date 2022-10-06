@@ -9,4 +9,13 @@ final Map<String, String> esES = {
       'Guarde sus medicamentos más\nimportantes en favoritos',
   'offline_access': 'Acceso sin conexión',
   'download_prescriptions': 'Descargar recetas',
+  'painkillers': 'Analgésicos',
+  'anesthetics': 'Anestesia',
+  'anti_inflammatory': 'Antiinflamatorio',
+  'steroids': 'Esteroides',
+  'antibiotics': 'Antibióticos',
+  'type_medications': 'Tipos de medicación',
+  'downloaded': 'Descargados',
+  'search': 'Buscar',
+  'favorites': 'Favoritos',
 };

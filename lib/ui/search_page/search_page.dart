@@ -9,7 +9,7 @@ class SearchPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Pesquisa'),
+        title: Text('search'.tr),
         backgroundColor: Colors.deepPurple,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(
