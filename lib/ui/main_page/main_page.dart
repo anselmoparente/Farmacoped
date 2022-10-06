@@ -1,6 +1,6 @@
 import 'package:farmacoped/ui/downloaded_medication/downloaded_medication.dart';
 import 'package:farmacoped/ui/favorites_page/favorites_page.dart';
-import 'package:farmacoped/ui/medication_page/medication_page.dart';
+import 'package:farmacoped/ui/type_medication_page/type_medication_page.dart';
 import 'package:farmacoped/ui/search_page/search_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -20,7 +20,7 @@ class MainPage extends GetView<MainController> {
         controller: pageController,
         physics: const NeverScrollableScrollPhysics(),
         children: [
-          const MedicationPage(),
+          const TypeMedicationPage(),
           const DownloadedMedication(),
           const SearchPage(),
           const FavoritePage(),
