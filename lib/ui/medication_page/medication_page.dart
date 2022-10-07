@@ -16,10 +16,33 @@ class MedicationPage extends StatelessWidget {
         centerTitle: true,
         title: Text(title),
         backgroundColor: Colors.deepPurple,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(
-            bottom: Radius.elliptical(Get.width, 48.0),
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(Get.height * 0.05),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.favorite_outline,
+                  color: Colors.white,
+                ),
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.file_download_outlined,
+                  color: Colors.white,
+                ),
+              )
+            ],
           ),
+        ),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 8.0,
+          vertical: 16.0,
         ),
       ),
     );
