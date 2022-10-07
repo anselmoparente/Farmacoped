@@ -39,7 +39,7 @@ class TutorialPage extends GetView<TutorialController> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: const EdgeInsets.all(16.0),
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: SmoothPageIndicator(
                   controller: pageController,
                   effect: ScaleEffect(
