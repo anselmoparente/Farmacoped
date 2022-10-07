@@ -1,3 +1,4 @@
+import 'package:farmacoped/routes/app_pages.dart';
 import 'package:farmacoped/ui/type_medication_page/widgets/type_medication.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -27,7 +28,9 @@ class TypeMedicationPage extends StatelessWidget {
             TypeMedication(
               title: 'painkillers'.tr,
               image: '',
-              onTap: () {},
+              onTap: () {
+                Get.toNamed(Routes.MEDICATION);
+              },
             ),
             TypeMedication(
               title: 'anesthetics'.tr,

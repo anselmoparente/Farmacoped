@@ -1,3 +1,4 @@
+import 'package:farmacoped/ui/medication_page/medication_page.dart';
 import 'package:farmacoped/ui/splash_page/splash_page.dart';
 import 'package:get/get.dart';
 
@@ -25,6 +26,10 @@ abstract class AppPages {
       name: Routes.MAIN,
       page: () => const MainPage(),
       binding: MainBinding(),
+    ),
+    GetPage(
+      name: Routes.MEDICATION,
+      page: () => const MedicationPage(title: 'Novalgina'),
     ),
   ];
 }
