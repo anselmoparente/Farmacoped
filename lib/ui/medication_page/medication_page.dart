@@ -39,12 +39,6 @@ class MedicationPage extends StatelessWidget {
           ),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 8.0,
-          vertical: 16.0,
-        ),
-      ),
     );
   }
 }

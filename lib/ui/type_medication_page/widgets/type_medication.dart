@@ -35,15 +35,19 @@ class TypeMedication extends StatelessWidget {
           ],
         ),
         child: Center(
-          child: Wrap(
-            alignment: WrapAlignment.center,
-            crossAxisAlignment: WrapCrossAlignment.center,
-            spacing: 24,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Icon(Icons.medication, size: 56),
-              Text(
-                title.toUpperCase(),
-                style: const TextStyle(color: Colors.grey, fontSize: 24),
+              Padding(
+                padding: EdgeInsets.only(left: Get.width * 0.05),
+                child: const Icon(Icons.medication, size: 56),
+              ),
+              Padding(
+                padding: EdgeInsets.only(right: Get.width * 0.05),
+                child: Text(
+                  title.toUpperCase(),
+                  style: const TextStyle(color: Colors.grey, fontSize: 24),
+                ),
               ),
             ],
           ),
