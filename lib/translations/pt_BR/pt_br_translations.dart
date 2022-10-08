@@ -18,4 +18,5 @@ final Map<String, String> ptBR = {
   'downloaded': 'Baixados',
   'search': 'Pesquisar',
   'favorites': 'Favoritos',
+  'medications': 'Medicações',
 };

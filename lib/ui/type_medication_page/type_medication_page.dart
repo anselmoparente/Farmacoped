@@ -29,7 +29,7 @@ class TypeMedicationPage extends StatelessWidget {
               title: 'painkillers'.tr,
               image: '',
               onTap: () {
-                Get.toNamed(Routes.MEDICATION);
+                Get.toNamed(Routes.LIST_MEDICATION);
               },
             ),
             TypeMedication(

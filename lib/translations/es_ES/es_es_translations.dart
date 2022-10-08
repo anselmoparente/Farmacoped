@@ -18,4 +18,5 @@ final Map<String, String> esES = {
   'downloaded': 'Descargados',
   'search': 'Buscar',
   'favorites': 'Favoritos',
+  'medications': 'Medicamentos',
 };
