@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "232143686114",
+    "project_id": "farmacoped-001",
+    "storage_bucket": "farmacoped-001.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:232143686114:android:35801aaca1e3cce00951bb",
+        "android_client_info": {
+          "package_name": "com.phoenix.farmacoped"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "232143686114-qm56bvqkq9i76sqo6e444hnfd2add48h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiQTNy2X-nPhX_C1vKK3UsAakbciD1Eqc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "232143686114-qm56bvqkq9i76sqo6e444hnfd2add48h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
