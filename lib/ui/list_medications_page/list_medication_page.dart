@@ -1,4 +1,5 @@
 import 'package:farmacoped/controllers/list_medication_controller.dart';
+import 'package:farmacoped/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -62,60 +63,63 @@ class ListMedicationPage extends GetView<ListMedicationController> {
             child: ListView.builder(
               itemCount: 3,
               itemBuilder: (BuildContext context, int index) {
-                return Container(
-                  height: 64,
-                  margin: EdgeInsets.symmetric(
-                    horizontal: Get.width * 0.05,
-                    vertical: 8.0,
-                  ),
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(24.0),
+                return GestureDetector(
+                  onTap: () => Get.toNamed(Routes.MEDICATION),
+                  child: Container(
+                    height: 64,
+                    margin: EdgeInsets.symmetric(
+                      horizontal: Get.width * 0.05,
+                      vertical: 8.0,
                     ),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Color.fromARGB(255, 186, 186, 186),
-                        blurRadius: 5.0,
-                        spreadRadius: 2.0,
-                        offset: Offset(0.0, 0.0),
-                      )
-                    ],
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 12.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text(
-                              'Amoxicilina',
-                              style: TextStyle(
-                                color: Colors.indigo,
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            Text(
-                              'Antibiotico',
-                              style: TextStyle(
-                                color: Colors.indigo,
-                              ),
-                            ),
-                          ],
-                        ),
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(24.0),
                       ),
-                      const Padding(
-                        padding: EdgeInsets.only(right: 12.0),
-                        child: Icon(
-                          Icons.arrow_forward_ios,
-                          color: Colors.indigo,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Color.fromARGB(255, 186, 186, 186),
+                          blurRadius: 5.0,
+                          spreadRadius: 2.0,
+                          offset: Offset(0.0, 0.0),
+                        )
+                      ],
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 12.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: const [
+                              Text(
+                                'Amoxicilina',
+                                style: TextStyle(
+                                  color: Colors.indigo,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                'Antibiotico',
+                                style: TextStyle(
+                                  color: Colors.indigo,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                      )
-                    ],
+                        const Padding(
+                          padding: EdgeInsets.only(right: 12.0),
+                          child: Icon(
+                            Icons.arrow_forward_ios,
+                            color: Colors.indigo,
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 );
               },
