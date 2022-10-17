@@ -1,9 +1,11 @@
+import 'package:farmacoped/controllers/main_controller.dart';
+import 'package:farmacoped/models/medication_model.dart';
 import 'package:farmacoped/routes/app_pages.dart';
 import 'package:farmacoped/ui/type_medication_page/widgets/type_medication.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class TypeMedicationPage extends StatelessWidget {
+class TypeMedicationPage extends GetView<MainController> {
   const TypeMedicationPage({super.key});
 
   @override
@@ -29,7 +31,13 @@ class TypeMedicationPage extends StatelessWidget {
               title: 'painkillers'.tr,
               image: '',
               onTap: () {
-                Get.toNamed(Routes.LIST_MEDICATION);
+                List<MedicationModel> typeMedications = [];
+                for (int i = 0; i < controller.medications.length; i++) {
+                  if (controller.medications[i].type == 'Antibiótico') {
+                    typeMedications.add(controller.medications[i]);
+                  }
+                }
+                Get.toNamed(Routes.LIST_MEDICATION, arguments: typeMedications);
               },
             ),
             TypeMedication(

@@ -61,10 +61,13 @@ class ListMedicationPage extends GetView<ListMedicationController> {
           ),
           Expanded(
             child: ListView.builder(
-              itemCount: 3,
+              itemCount: 6,
               itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(
-                  onTap: () => Get.toNamed(Routes.MEDICATION),
+                  onTap: () => Get.toNamed(
+                    Routes.MEDICATION,
+                    arguments: controller.medications[index],
+                  ),
                   child: Container(
                     height: 64,
                     margin: EdgeInsets.symmetric(
@@ -93,18 +96,18 @@ class ListMedicationPage extends GetView<ListMedicationController> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
+                            children: [
                               Text(
-                                'Amoxicilina',
-                                style: TextStyle(
+                                controller.medications[index].name,
+                                style: const TextStyle(
                                   color: Colors.indigo,
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
                               Text(
-                                'Antibiotico',
-                                style: TextStyle(
+                                controller.medications[index].type,
+                                style: const TextStyle(
                                   color: Colors.indigo,
                                 ),
                               ),
