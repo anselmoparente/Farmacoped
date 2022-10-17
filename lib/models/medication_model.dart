@@ -7,7 +7,7 @@ class MedicationModel implements Model {
   final String indicatedAge;
   final String contraindications;
   final String adverseEffects;
-  final String? takeOnAnEmptyStomach;
+  final String takeOnAnEmptyStomach;
   final String routeOfAdministration;
   final String guidelines;
   final String adjustDose;
@@ -19,7 +19,7 @@ class MedicationModel implements Model {
     required this.indicatedAge,
     required this.contraindications,
     required this.adverseEffects,
-    this.takeOnAnEmptyStomach,
+    required this.takeOnAnEmptyStomach,
     required this.routeOfAdministration,
     required this.guidelines,
     required this.adjustDose,
