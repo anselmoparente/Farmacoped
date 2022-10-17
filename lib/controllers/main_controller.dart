@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:farmacoped/models/laboratory_model.dart';
 import 'package:farmacoped/models/medication_model.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class MainController extends GetxController {
@@ -11,6 +12,8 @@ class MainController extends GetxController {
   set currentPage(int value) => _currentPage.value = value;
 
   final medications = <MedicationModel>[].obs;
+
+  final medicationSearch = TextEditingController(text: '');
 
   @override
   void onInit() async {
