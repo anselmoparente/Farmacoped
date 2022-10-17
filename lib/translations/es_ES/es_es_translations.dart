@@ -19,4 +19,7 @@ final Map<String, String> esES = {
   'search': 'Buscar',
   'favorites': 'Favoritos',
   'medications': 'Medicamentos',
+  'favorite_medications_empty':
+      'Aún no se han añadido\nmedicamentos a favoritos.',
+  'downloaded_medication_empty': 'Aún no se ha descargado ningún medicamento.',
 };

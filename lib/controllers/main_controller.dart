@@ -12,6 +12,8 @@ class MainController extends GetxController {
   set currentPage(int value) => _currentPage.value = value;
 
   final medications = <MedicationModel>[].obs;
+  final downloadedMedications = <MedicationModel>[].obs;
+  final favoriteMedications = <MedicationModel>[].obs;
 
   final medicationSearch = TextEditingController(text: '');
 

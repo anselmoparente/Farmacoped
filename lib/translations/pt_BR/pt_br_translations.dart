@@ -19,4 +19,7 @@ final Map<String, String> ptBR = {
   'search': 'Pesquisar',
   'favorites': 'Favoritos',
   'medications': 'Medicações',
+  'favorite_medications_empty':
+      'Ainda não foi adicionado\nnenhum medicamento\naos favoritos.',
+  'downloaded_medication_empty': 'Ainda não foi baixado nenhum medicamento.',
 };
