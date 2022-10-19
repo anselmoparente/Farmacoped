@@ -66,7 +66,7 @@ class SearchPage extends GetView<MainController> {
           ),
           Expanded(
             child: ListView.builder(
-              itemCount: 6,
+              itemCount: controller.medications.length,
               itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(
                   onTap: () => Get.toNamed(
