@@ -28,7 +28,7 @@ class TypeMedicationPage extends GetView<MainController> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             TypeMedication(
-              title: 'painkillers'.tr,
+              title: 'antibiotics'.tr,
               image: '',
               onTap: () {
                 List<MedicationModel> typeMedications = [];
@@ -41,24 +41,43 @@ class TypeMedicationPage extends GetView<MainController> {
               },
             ),
             TypeMedication(
-              title: 'anesthetics'.tr,
-              image: '',
-              onTap: () {},
-            ),
-            TypeMedication(
               title: 'anti_inflammatory'.tr,
               image: '',
-              onTap: () {},
+              onTap: () {
+                List<MedicationModel> typeMedications = [];
+                for (int i = 0; i < controller.medications.length; i++) {
+                  if (controller.medications[i].type == 'Anti-inflamatório') {
+                    typeMedications.add(controller.medications[i]);
+                  }
+                }
+                Get.toNamed(Routes.LIST_MEDICATION, arguments: typeMedications);
+              },
             ),
             TypeMedication(
-              title: 'steroids'.tr,
+              title: 'anesthetics'.tr,
               image: '',
-              onTap: () {},
+              onTap: () {
+                List<MedicationModel> typeMedications = [];
+                for (int i = 0; i < controller.medications.length; i++) {
+                  if (controller.medications[i].type == 'Anestésico') {
+                    typeMedications.add(controller.medications[i]);
+                  }
+                }
+                Get.toNamed(Routes.LIST_MEDICATION, arguments: typeMedications);
+              },
             ),
             TypeMedication(
-              title: 'antibiotics'.tr,
+              title: 'antifungal'.tr,
               image: '',
-              onTap: () {},
+              onTap: () {
+                List<MedicationModel> typeMedications = [];
+                for (int i = 0; i < controller.medications.length; i++) {
+                  if (controller.medications[i].type == 'Antifúngico') {
+                    typeMedications.add(controller.medications[i]);
+                  }
+                }
+                Get.toNamed(Routes.LIST_MEDICATION, arguments: typeMedications);
+              },
             ),
           ],
         ),
