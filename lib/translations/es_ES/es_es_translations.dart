@@ -21,4 +21,5 @@ final Map<String, String> esES = {
   'favorite_medications_empty':
       'Aún no se han añadido\nmedicamentos a favoritos.',
   'downloaded_medication_empty': 'Aún no se ha descargado ningún medicamento.',
+  'trade_name': 'Nombres comerciales',
 };

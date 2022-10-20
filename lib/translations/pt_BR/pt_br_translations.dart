@@ -21,4 +21,5 @@ final Map<String, String> ptBR = {
   'favorite_medications_empty':
       'Ainda não foi adicionado\nnenhum medicamento\naos favoritos.',
   'downloaded_medication_empty': 'Ainda não foi baixado nenhum medicamento.',
+  'trade_names': 'Nomes comerciais',
 };
