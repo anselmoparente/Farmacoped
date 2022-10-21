@@ -1,5 +1,6 @@
 import 'package:farmacoped/controllers/main_controller.dart';
-import 'package:farmacoped/ui/medication_page/widgets/custom_expansion_tile.dart';
+import 'package:farmacoped/routes/app_pages.dart';
+import 'package:farmacoped/ui/medication_page/widgets/medication_expansion_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -79,7 +80,12 @@ class MedicationPage extends StatelessWidget {
                 ],
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.toNamed(
+                    Routes.TRADE_NAME,
+                    arguments: Get.arguments.tradeNames,
+                  );
+                },
                 style: TextButton.styleFrom(
                   backgroundColor: Colors.white,
                   padding: const EdgeInsets.symmetric(
@@ -94,7 +100,9 @@ class MedicationPage extends StatelessWidget {
                     Text(
                       'trade_names'.tr,
                       style: const TextStyle(
-                          fontSize: 18, color: Colors.deepPurple),
+                        fontSize: 18,
+                        color: Colors.deepPurple,
+                      ),
                     ),
                     const Icon(
                       Icons.arrow_forward_ios,
@@ -117,34 +125,34 @@ class MedicationPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              CustomExpansionTile(
+              MedicationExpansionTile(
                 title: 'indicated_age'.tr,
-                subtitle: Get.arguments.indicatedAge,
+                content: Get.arguments.indicatedAge,
               ),
-              CustomExpansionTile(
+              MedicationExpansionTile(
                 title: 'contraindications'.tr,
-                subtitle: Get.arguments.contraindications,
+                content: Get.arguments.contraindications,
               ),
-              CustomExpansionTile(
+              MedicationExpansionTile(
                 title: 'adverse_effects'.tr,
-                subtitle: Get.arguments.adverseEffects,
+                content: Get.arguments.adverseEffects,
               ),
               if (Get.arguments.takeOnAnEmptyStomach != '')
-                CustomExpansionTile(
+                MedicationExpansionTile(
                   title: 'adverse_effects'.tr,
-                  subtitle: Get.arguments.takeOnAnEmptyStomach,
+                  content: Get.arguments.takeOnAnEmptyStomach,
                 ),
-              CustomExpansionTile(
+              MedicationExpansionTile(
                 title: 'route_administration'.tr,
-                subtitle: Get.arguments.routeOfAdministration,
+                content: Get.arguments.routeOfAdministration,
               ),
-              CustomExpansionTile(
+              MedicationExpansionTile(
                 title: 'guidelines'.tr,
-                subtitle: Get.arguments.guidelines,
+                content: Get.arguments.guidelines,
               ),
-              CustomExpansionTile(
+              MedicationExpansionTile(
                 title: 'adjust_dose'.tr,
-                subtitle: Get.arguments.adjustDose,
+                content: Get.arguments.adjustDose,
               ),
             ],
           ),

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class CustomExpansionTile extends StatelessWidget {
+class MedicationExpansionTile extends StatelessWidget {
   final String title;
-  final String subtitle;
+  final String content;
 
-  const CustomExpansionTile({
+  const MedicationExpansionTile({
     required this.title,
-    required this.subtitle,
+    required this.content,
     super.key,
   });
 
@@ -25,7 +25,7 @@ class CustomExpansionTile extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
           child: Text(
-            subtitle,
+            content,
             style: const TextStyle(
               fontSize: 16,
               color: Colors.indigo,

@@ -29,4 +29,7 @@ final Map<String, String> ptBR = {
   'route_administration': 'Via de administração',
   'guidelines': 'Dosagem e orientações',
   'adjust_dose': 'Ajustar dose em pacientes renais, hepáticos e cardíacos?',
+  'amount': 'Quanto vem em cada embalagem?',
+  'composition': 'Composição (mg/ml):',
+  'warnings': 'Atenção alérgicos e diabéticos!',
 };

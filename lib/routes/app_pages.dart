@@ -1,7 +1,9 @@
 import 'package:farmacoped/bindings/list_medication_binding.dart';
+import 'package:farmacoped/bindings/trade_name_binding.dart';
 import 'package:farmacoped/ui/list_medications_page/list_medication_page.dart';
 import 'package:farmacoped/ui/medication_page/medication_page.dart';
 import 'package:farmacoped/ui/splash_page/splash_page.dart';
+import 'package:farmacoped/ui/trade_name_page/trade_name_page.dart';
 import 'package:get/get.dart';
 
 import 'package:farmacoped/ui/main_page/main_page.dart';
@@ -37,6 +39,11 @@ abstract class AppPages {
       name: Routes.LIST_MEDICATION,
       page: () => const ListMedicationPage(),
       binding: ListMedicationBinding(),
+    ),
+    GetPage(
+      name: Routes.TRADE_NAME,
+      page: () => const TradeNamePage(),
+      binding: TradeNameBinding(),
     ),
   ];
 }

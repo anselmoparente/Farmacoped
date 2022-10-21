@@ -30,4 +30,7 @@ final Map<String, String> esES = {
   'guidelines': 'Dosis y pautas',
   'adjust_dose':
       '¿Ajustar la dosis en pacientes renales, hepáticos y cardíacos?',
+  'amount': '¿Cuánto hay en cada paquete?',
+  'composition': 'Composición (mg/ml):',
+  'warnings': '¡Atención Alergias y Diabéticos!',
 };
