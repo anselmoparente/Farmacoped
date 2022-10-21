@@ -1,6 +1,4 @@
 import 'package:farmacoped/models/laboratory_model.dart';
-import 'package:farmacoped/models/medication_model.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class TradeNameController extends GetxController {
