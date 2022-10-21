@@ -22,4 +22,11 @@ final Map<String, String> ptBR = {
       'Ainda não foi adicionado\nnenhum medicamento\naos favoritos.',
   'downloaded_medication_empty': 'Ainda não foi baixado nenhum medicamento.',
   'trade_names': 'Nomes comerciais',
+  'indicated_age': 'Idade indicada',
+  'contraindications': 'Contraindicações',
+  'adverse_effects': 'Efeitos adversos mais comuns',
+  'take_empty': 'Tomar em jeum?',
+  'route_administration': 'Via de administração',
+  'guidelines': 'Dosagem e orientações',
+  'adjust_dose': 'Ajustar dose em pacientes renais, hepáticos e cardíacos?',
 };

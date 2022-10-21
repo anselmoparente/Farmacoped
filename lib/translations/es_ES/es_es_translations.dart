@@ -22,4 +22,12 @@ final Map<String, String> esES = {
       'Aún no se han añadido\nmedicamentos a favoritos.',
   'downloaded_medication_empty': 'Aún no se ha descargado ningún medicamento.',
   'trade_name': 'Nombres comerciales',
+  'indicated_age': 'Edad indicada',
+  'contraindications': 'Contra indicaciones',
+  'adverse_effects': 'Efectos adversos más comunes',
+  'take_empty': '¿Tomar con el estomago vacio?',
+  'route_administration': 'Ruta de administración',
+  'guidelines': 'Dosis y pautas',
+  'adjust_dose':
+      '¿Ajustar la dosis en pacientes renales, hepáticos y cardíacos?',
 };

@@ -13,8 +13,26 @@ class CustomExpansionTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ExpansionTile(
-      title: Text(title),
-      subtitle: Text(subtitle),
+      title: Text(
+        title,
+        style: const TextStyle(
+          fontSize: 20,
+          color: Colors.indigo,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+          child: Text(
+            subtitle,
+            style: const TextStyle(
+              fontSize: 16,
+              color: Colors.indigo,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
