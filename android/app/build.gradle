@@ -44,7 +44,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.phoenix.Farmacoped"
+        applicationId "com.phoenix.farmacoped"
         minSdkVersion 21
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
