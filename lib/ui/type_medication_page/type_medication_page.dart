@@ -29,7 +29,7 @@ class TypeMedicationPage extends GetView<MainController> {
           children: [
             TypeMedication(
               title: 'antibiotics'.tr,
-              image: '',
+              image: 'assets/images/antibiotic_icon.png',
               onTap: () {
                 List<MedicationModel> typeMedications = [];
                 for (int i = 0; i < controller.medications.length; i++) {
@@ -42,7 +42,7 @@ class TypeMedicationPage extends GetView<MainController> {
             ),
             TypeMedication(
               title: 'anti_inflammatory'.tr,
-              image: '',
+              image: 'assets/images/anti_inflamatory_icon.png',
               onTap: () {
                 List<MedicationModel> typeMedications = [];
                 for (int i = 0; i < controller.medications.length; i++) {
@@ -55,7 +55,7 @@ class TypeMedicationPage extends GetView<MainController> {
             ),
             TypeMedication(
               title: 'anesthetics'.tr,
-              image: '',
+              image: 'assets/images/anestesy_icon.png',
               onTap: () {
                 List<MedicationModel> typeMedications = [];
                 for (int i = 0; i < controller.medications.length; i++) {
@@ -68,7 +68,7 @@ class TypeMedicationPage extends GetView<MainController> {
             ),
             TypeMedication(
               title: 'antifungal'.tr,
-              image: '',
+              image: 'assets/images/antifungic_icon.png',
               onTap: () {
                 List<MedicationModel> typeMedications = [];
                 for (int i = 0; i < controller.medications.length; i++) {

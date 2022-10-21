@@ -40,7 +40,7 @@ class TypeMedication extends StatelessWidget {
             children: [
               Padding(
                 padding: EdgeInsets.only(left: Get.width * 0.05),
-                child: const Icon(Icons.medication, size: 56),
+                child: Image.asset(image, width: 75, height: 75),
               ),
               Padding(
                 padding: EdgeInsets.only(right: Get.width * 0.05),
