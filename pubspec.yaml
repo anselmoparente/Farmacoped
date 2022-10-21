@@ -37,6 +37,13 @@ dependencies:
   smooth_page_indicator: ^1.0.0+2
 
 dev_dependencies:
+flutter_launcher_icons: '^0.10.0'
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: 'assets/images/icon_launcher.png'
+ 
   flutter_test:
     sdk: flutter
 
