@@ -24,7 +24,6 @@ class MainPage extends GetView<MainController> {
           const DownloadedMedication(),
           const SearchPage(),
           const FavoritePage(),
-          Container(),
         ],
       ),
       bottomNavigationBar: Padding(
@@ -48,7 +47,7 @@ class MainPage extends GetView<MainController> {
           ),
           child: Obx(
             () => Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 TextButton(
                   onPressed: () {
@@ -122,25 +121,6 @@ class MainPage extends GetView<MainController> {
                     Icons.favorite_outline,
                     size: 28,
                     color: controller.currentPage == 3
-                        ? Colors.deepPurple
-                        : Colors.grey,
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    if (controller.currentPage != 4) {
-                      controller.currentPage = 4;
-                      pageController.jumpToPage(4);
-                    }
-                  },
-                  style: const ButtonStyle(
-                    overlayColor:
-                        MaterialStatePropertyAll<Color>(Colors.transparent),
-                  ),
-                  child: Icon(
-                    Icons.settings_outlined,
-                    size: 28,
-                    color: controller.currentPage == 4
                         ? Colors.deepPurple
                         : Colors.grey,
                   ),
