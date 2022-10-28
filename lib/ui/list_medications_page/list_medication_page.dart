@@ -136,6 +136,9 @@ class ListMedicationPage extends GetView<ListMedicationController> {
               },
             ),
           ),
+          SizedBox(
+            height: 16.0,
+          ),
         ],
       ),
     );

@@ -149,6 +149,9 @@ class SearchPage extends GetView<MainController> {
               ),
             ),
           ),
+          SizedBox(
+            height: 16.0,
+          ),
         ],
       ),
     );
