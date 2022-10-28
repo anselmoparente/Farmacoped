@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:farmacoped/models/laboratory_model.dart';
 import 'package:farmacoped/models/medication_model.dart';
