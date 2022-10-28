@@ -2,6 +2,7 @@ import 'package:farmacoped/controllers/main_controller.dart';
 import 'package:farmacoped/routes/app_pages.dart';
 import 'package:farmacoped/ui/medication_page/widgets/medication_expansion_tile.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:get/get.dart';
 
 class MedicationPage extends StatelessWidget {
@@ -27,6 +28,20 @@ class MedicationPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
+                  IconButton(
+                    onPressed: () {
+                      launchUrl(
+                        Uri.parse(
+                          'https://www.gov.br/anvisa/pt-br/assuntos/medicamentos',
+                        ),
+                        mode: LaunchMode.inAppWebView,
+                      );
+                    },
+                    icon: Icon(
+                      Icons.trending_up,
+                      color: Colors.white,
+                    ),
+                  ),
                   Obx(
                     () => IconButton(
                       onPressed: () {
