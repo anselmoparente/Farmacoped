@@ -74,8 +74,16 @@ class ListMedicationPage extends GetView<ListMedicationController> {
                       horizontal: Get.width * 0.05,
                       vertical: 8.0,
                     ),
-                    decoration: const BoxDecoration(
-                      color: Colors.white,
+                    decoration: BoxDecoration(
+                      color: controller.medications[index].type == 'Antibiótico'
+                          ? Colors.blueAccent
+                          : controller.medications[index].type ==
+                                  'Anti-inflamatório'
+                              ? Colors.pinkAccent
+                              : controller.medications[index].type ==
+                                      'Anestésico'
+                                  ? Colors.deepOrange
+                                  : Colors.greenAccent,
                       borderRadius: BorderRadius.all(
                         Radius.circular(24.0),
                       ),
@@ -92,7 +100,7 @@ class ListMedicationPage extends GetView<ListMedicationController> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(left: 12.0),
+                          padding: const EdgeInsets.only(left: 16.0),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -100,7 +108,7 @@ class ListMedicationPage extends GetView<ListMedicationController> {
                               Text(
                                 controller.medications[index].name,
                                 style: const TextStyle(
-                                  color: Colors.indigo,
+                                  color: Colors.white,
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -108,17 +116,17 @@ class ListMedicationPage extends GetView<ListMedicationController> {
                               Text(
                                 controller.medications[index].type,
                                 style: const TextStyle(
-                                  color: Colors.indigo,
+                                  color: Colors.white,
                                 ),
                               ),
                             ],
                           ),
                         ),
                         const Padding(
-                          padding: EdgeInsets.only(right: 12.0),
+                          padding: EdgeInsets.only(right: 16.0),
                           child: Icon(
                             Icons.arrow_forward_ios,
-                            color: Colors.indigo,
+                            color: Colors.white,
                           ),
                         )
                       ],
