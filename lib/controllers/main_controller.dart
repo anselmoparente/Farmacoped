@@ -69,6 +69,5 @@ class MainController extends GetxController {
         medicationsSearch.add(medications[i]);
       }
     }
-    log(medicationsSearch.length.toString());
   }
 }

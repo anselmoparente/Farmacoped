@@ -50,7 +50,10 @@ class SearchPage extends GetView<MainController> {
                   color: Colors.grey,
                 ),
                 suffixIcon: TextButton(
-                  onPressed: () => controller.nameSearch.text = '',
+                  onPressed: () {
+                    controller.nameSearch.text = '';
+                    controller.search();
+                  },
                   style: const ButtonStyle(
                     overlayColor:
                         MaterialStatePropertyAll<Color>(Colors.transparent),
