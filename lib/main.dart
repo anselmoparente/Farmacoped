@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       locale: Get.deviceLocale,
+      fallbackLocale: Locale('pt'),
       getPages: AppPages.pages,
       initialRoute: Routes.SPLASH,
       initialBinding: TutorialBinding(),

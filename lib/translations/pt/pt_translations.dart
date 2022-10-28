@@ -1,4 +1,4 @@
-final Map<String, String> ptBR = {
+final Map<String, String> pt = {
   'your_portable_leaflet': 'Sua bula portátil',
   'find_key_information_about_your_medication':
       'Encontre as principais informações\nsobre seu medicamento',

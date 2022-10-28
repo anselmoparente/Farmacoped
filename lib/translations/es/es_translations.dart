@@ -1,4 +1,4 @@
-final Map<String, String> esES = {
+final Map<String, String> es = {
   'your_portable_leaflet': 'Tu folleto portátil',
   'find_key_information_about_your_medication':
       'Encuentre información clave\nsobre su medicamento',
