@@ -12,10 +12,11 @@ class MainController extends GetxController {
   set currentPage(int value) => _currentPage.value = value;
 
   final medications = <MedicationModel>[].obs;
+  final medicationsSearch = <MedicationModel>[].obs;
   final downloadedMedications = <MedicationModel>[].obs;
   final favoriteMedications = <MedicationModel>[].obs;
 
-  final medicationSearch = TextEditingController(text: '');
+  final nameSearch = TextEditingController(text: '');
 
   @override
   void onInit() async {
@@ -56,7 +57,18 @@ class MainController extends GetxController {
         ),
       );
     }
-    log(medications.toString());
+    
+    search();
     super.onInit();
+  }
+
+  void search() {
+    medicationsSearch.clear();
+    for (int i = 0; i < medications.length; i++) {
+      if (medications[i].name.contains(nameSearch.text)) {
+        medicationsSearch.add(medications[i]);
+      }
+    }
+    log(medicationsSearch.length.toString());
   }
 }
