@@ -61,7 +61,7 @@ class TypeMedication extends StatelessWidget {
                 padding: EdgeInsets.only(right: Get.width * 0.05),
                 child: Text(
                   title.toUpperCase(),
-                  style: const TextStyle(color: Colors.white, fontSize: 22),
+                  style: const TextStyle(color: Colors.white, fontSize: 20),
                 ),
               ),
             ],
