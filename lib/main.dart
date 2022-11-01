@@ -9,10 +9,10 @@ import 'package:get/get.dart';
 import 'package:farmacoped/translations/app_translations.dart';
 
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]);
-  WidgetsFlutterBinding.ensureInitialized();
   MobileAds.instance.initialize();
   await Firebase.initializeApp();
   runApp(const MyApp());
