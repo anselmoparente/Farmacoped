@@ -28,7 +28,7 @@ abstract class AppPages {
     ),
     GetPage(
       name: Routes.MAIN,
-      page: () => const MainPage(),
+      page: () => MainPage(),
       binding: MainBinding(),
     ),
     GetPage(

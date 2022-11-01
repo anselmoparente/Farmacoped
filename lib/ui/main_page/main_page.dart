@@ -1,3 +1,4 @@
+import 'package:farmacoped/services/ad_mob_service.dart';
 import 'package:farmacoped/ui/downloaded_medication_page/downloaded_medication.dart';
 import 'package:farmacoped/ui/favorites_page/favorites_page.dart';
 import 'package:farmacoped/ui/type_medication_page/type_medication_page.dart';
@@ -6,9 +7,28 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:farmacoped/controllers/main_controller.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 class MainPage extends GetView<MainController> {
-  const MainPage({super.key});
+  MainPage({Key? key}) : super(key: key) {
+    _initAd();
+  }
+
+  late InterstitialAd _interstitialAd;
+
+  void _initAd() {
+    InterstitialAd.load(
+      adUnitId: AdMobService.InterstitialAdUnitId!,
+      request: AdRequest(),
+      adLoadCallback: InterstitialAdLoadCallback(
+        onAdLoaded: (InterstitialAd ad) {
+          _interstitialAd = ad;
+          _interstitialAd.show();
+        },
+        onAdFailedToLoad: (error) {},
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
