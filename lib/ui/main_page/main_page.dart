@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:farmacoped/controllers/main_controller.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 class MainPage extends GetView<MainController> {
   const MainPage({super.key});

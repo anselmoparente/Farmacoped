@@ -62,7 +62,8 @@ class MainController extends GetxController {
 
     search();
     _createInterstitialAd();
-
+    _showInterstitialAd();
+    
     super.onInit();
   }
 
