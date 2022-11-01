@@ -1,8 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:farmacoped/models/laboratory_model.dart';
 import 'package:farmacoped/models/medication_model.dart';
+import 'package:farmacoped/services/ad_mob_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 class MainController extends GetxController {
   final _currentPage = 0.obs;
@@ -15,6 +17,8 @@ class MainController extends GetxController {
   final favoriteMedications = <MedicationModel>[].obs;
 
   final nameSearch = TextEditingController(text: '');
+
+  late InterstitialAd? interstitialAd;
 
   @override
   void onInit() async {
@@ -55,8 +59,10 @@ class MainController extends GetxController {
         ),
       );
     }
-    
+
     search();
+    _createInterstitialAd();
+
     super.onInit();
   }
 
@@ -66,6 +72,34 @@ class MainController extends GetxController {
       if (medications[i].name.contains(nameSearch.text)) {
         medicationsSearch.add(medications[i]);
       }
+    }
+  }
+
+  void _createInterstitialAd() {
+    InterstitialAd.load(
+      adUnitId: AdMobService.InterstitialAdUnitId!,
+      request: const AdRequest(),
+      adLoadCallback: InterstitialAdLoadCallback(
+        onAdLoaded: (ad) => interstitialAd = ad,
+        onAdFailedToLoad: (LoadAdError error) => interstitialAd = null,
+      ),
+    );
+  }
+
+  void _showInterstitialAd() {
+    if (interstitialAd != null) {
+      interstitialAd!.fullScreenContentCallback = FullScreenContentCallback(
+        onAdDismissedFullScreenContent: (ad) {
+          ad.dispose();
+          _createInterstitialAd();
+        },
+        onAdFailedToShowFullScreenContent: (ad, error) {
+          ad.dispose();
+          _createInterstitialAd();
+        },
+      );
+      interstitialAd!.show();
+      interstitialAd = null;
     }
   }
 }
