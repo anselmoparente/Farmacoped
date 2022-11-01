@@ -18,7 +18,7 @@ class MainController extends GetxController {
 
   final nameSearch = TextEditingController(text: '');
 
-  late InterstitialAd? interstitialAd;
+  InterstitialAd? interstitialAd;
 
   @override
   void onInit() async {
@@ -63,7 +63,7 @@ class MainController extends GetxController {
     search();
     _createInterstitialAd();
     _showInterstitialAd();
-    
+
     super.onInit();
   }
 
