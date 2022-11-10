@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:farmacoped/services/ad_mob_service.dart';
 import 'package:farmacoped/ui/downloaded_medication_page/downloaded_medication.dart';
 import 'package:farmacoped/ui/favorites_page/favorites_page.dart';
@@ -25,7 +27,9 @@ class MainPage extends GetView<MainController> {
           _interstitialAd = ad;
           _interstitialAd.show();
         },
-        onAdFailedToLoad: (error) {},
+        onAdFailedToLoad: (error) {
+          log(error.toString());
+        },
       ),
     );
   }
