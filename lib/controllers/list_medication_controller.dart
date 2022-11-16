@@ -25,7 +25,10 @@ class ListMedicationController extends GetxController {
   void search() {
     medicationsSearch.clear();
     for (int i = 0; i < medications.length; i++) {
-      if (medications[i].name.contains(nameSearch.text)) {
+      if (medications[i]
+          .name
+          .toLowerCase()
+          .contains(nameSearch.text.toLowerCase())) {
         medicationsSearch.add(medications[i]);
       }
     }
