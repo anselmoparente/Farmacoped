@@ -1,9 +1,12 @@
+import 'dart:developer';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:farmacoped/models/laboratory_model.dart';
 import 'package:farmacoped/models/medication_model.dart';
 import 'package:farmacoped/services/ad_mob_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 class MainController extends GetxController {
@@ -18,6 +21,8 @@ class MainController extends GetxController {
   final nameSearch = TextEditingController(text: '');
 
   InterstitialAd? interstitialAd;
+
+  final box = GetStorage();
 
   @override
   void onInit() async {
@@ -60,8 +65,16 @@ class MainController extends GetxController {
     }
 
     search();
-    // _createInterstitialAd();
-    // _showInterstitialAd();
+
+    if (box.read('favorites') != null) {
+      for (int i = 0; i < medications.length; i++) {
+        for (int j = 0; j < box.read('favorites').length; j++) {
+          if (medications[i].name == box.read('favorites')[j]) {
+            favoriteMedications.add(medications[i]);
+          }
+        }
+      }
+    }
 
     super.onInit();
   }
@@ -76,6 +89,10 @@ class MainController extends GetxController {
         medicationsSearch.add(medications[i]);
       }
     }
+  }
+
+  void saveFavorites(List<String> medications) {
+    box.write('favorites', medications);
   }
 
   void _createInterstitialAd() {
