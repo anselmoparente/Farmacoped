@@ -13,7 +13,6 @@ class MainController extends GetxController {
 
   final medications = <MedicationModel>[].obs;
   final medicationsSearch = <MedicationModel>[].obs;
-  final downloadedMedications = <MedicationModel>[].obs;
   final favoriteMedications = <MedicationModel>[].obs;
 
   final nameSearch = TextEditingController(text: '');

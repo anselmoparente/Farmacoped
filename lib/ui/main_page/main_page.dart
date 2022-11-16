@@ -1,7 +1,6 @@
 import 'dart:developer';
 
 import 'package:farmacoped/services/ad_mob_service.dart';
-import 'package:farmacoped/ui/downloaded_medication_page/downloaded_medication.dart';
 import 'package:farmacoped/ui/favorites_page/favorites_page.dart';
 import 'package:farmacoped/ui/type_medication_page/type_medication_page.dart';
 import 'package:farmacoped/ui/search_page/search_page.dart';
@@ -45,7 +44,6 @@ class MainPage extends GetView<MainController> {
         physics: const NeverScrollableScrollPhysics(),
         children: [
           const TypeMedicationPage(),
-          const DownloadedMedication(),
           const SearchPage(),
           const FavoritePage(),
         ],
@@ -104,7 +102,7 @@ class MainPage extends GetView<MainController> {
                         MaterialStatePropertyAll<Color>(Colors.transparent),
                   ),
                   child: Icon(
-                    Icons.file_download_outlined,
+                    Icons.search,
                     size: 28,
                     color: controller.currentPage == 1
                         ? Colors.deepPurple
@@ -123,28 +121,9 @@ class MainPage extends GetView<MainController> {
                         MaterialStatePropertyAll<Color>(Colors.transparent),
                   ),
                   child: Icon(
-                    Icons.search,
-                    size: 28,
-                    color: controller.currentPage == 2
-                        ? Colors.deepPurple
-                        : Colors.grey,
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    if (controller.currentPage != 3) {
-                      controller.currentPage = 3;
-                      pageController.jumpToPage(3);
-                    }
-                  },
-                  style: const ButtonStyle(
-                    overlayColor:
-                        MaterialStatePropertyAll<Color>(Colors.transparent),
-                  ),
-                  child: Icon(
                     Icons.favorite_outline,
                     size: 28,
-                    color: controller.currentPage == 3
+                    color: controller.currentPage == 2
                         ? Colors.deepPurple
                         : Colors.grey,
                   ),

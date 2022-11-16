@@ -67,31 +67,6 @@ class MedicationPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Obx(
-                    () => IconButton(
-                      onPressed: () {
-                        if (!Get.find<MainController>()
-                            .downloadedMedications
-                            .contains(Get.arguments)) {
-                          Get.find<MainController>()
-                              .downloadedMedications
-                              .add(Get.arguments);
-                        } else {
-                          Get.find<MainController>()
-                              .downloadedMedications
-                              .remove(Get.arguments);
-                        }
-                      },
-                      icon: Icon(
-                        Get.find<MainController>()
-                                .downloadedMedications
-                                .contains(Get.arguments)
-                            ? Icons.file_download_done_outlined
-                            : Icons.file_download_outlined,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
                 ],
               ),
               TextButton(
