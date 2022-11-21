@@ -40,7 +40,7 @@ class MedicationPage extends StatelessWidget {
                       );
                     },
                     icon: Icon(
-                      Icons.trending_up,
+                      Icons.travel_explore,
                       color: Colors.white,
                     ),
                   ),
