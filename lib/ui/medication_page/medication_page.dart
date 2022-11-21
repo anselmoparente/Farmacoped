@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:farmacoped/controllers/main_controller.dart';
 import 'package:farmacoped/routes/app_pages.dart';
 import 'package:farmacoped/ui/medication_page/widgets/medication_expansion_tile.dart';

@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:farmacoped/controllers/trade_name_controller.dart';
 import 'package:farmacoped/ui/trade_name_page/widgets/trade_name_expansion_tile.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +8,6 @@ class TradeNamePage extends GetView<TradeNameController> {
 
   @override
   Widget build(BuildContext context) {
-    log(Get.arguments.toString());
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
