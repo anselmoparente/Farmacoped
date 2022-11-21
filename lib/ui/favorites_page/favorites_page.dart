@@ -37,8 +37,18 @@ class FavoritePage extends GetView<MainController> {
                           horizontal: Get.width * 0.05,
                           vertical: 8.0,
                         ),
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
+                        decoration: BoxDecoration(
+                          color: controller.favoriteMedications[index].type ==
+                                  'Antibiótico'
+                              ? Colors.blueAccent
+                              : controller.favoriteMedications[index].type ==
+                                      'Anti-inflamatório'
+                                  ? Colors.pinkAccent
+                                  : controller.favoriteMedications[index]
+                                              .type ==
+                                          'Anestésico'
+                                      ? Colors.deepOrange
+                                      : Colors.greenAccent,
                           borderRadius: BorderRadius.all(
                             Radius.circular(24.0),
                           ),
@@ -64,7 +74,7 @@ class FavoritePage extends GetView<MainController> {
                                   Text(
                                     controller.favoriteMedications[index].name,
                                     style: const TextStyle(
-                                      color: Colors.indigo,
+                                      color: Colors.white,
                                       fontSize: 18,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -72,7 +82,7 @@ class FavoritePage extends GetView<MainController> {
                                   Text(
                                     controller.favoriteMedications[index].type,
                                     style: const TextStyle(
-                                      color: Colors.indigo,
+                                      color: Colors.white,
                                     ),
                                   ),
                                 ],
@@ -82,7 +92,7 @@ class FavoritePage extends GetView<MainController> {
                               padding: EdgeInsets.only(right: 12.0),
                               child: Icon(
                                 Icons.arrow_forward_ios,
-                                color: Colors.indigo,
+                                color: Colors.white,
                               ),
                             )
                           ],
