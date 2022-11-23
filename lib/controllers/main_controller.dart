@@ -30,6 +30,10 @@ class MainController extends GetxController {
     for (var element in query.docs) {
       List<LaboratoryModel> laboratories = [];
       for (int i = 0; i < element.get('nomes comerciais').length; i++) {
+        String auxComposition = element.get('dose padrão e orientações');
+        List<String> listComposition = auxComposition.split('|n');
+        auxComposition = listComposition.join('\n');
+
         if (element.get('nomes comerciais').length > 0) {
           laboratories.add(
             LaboratoryModel(
@@ -45,6 +49,11 @@ class MainController extends GetxController {
           );
         }
       }
+
+      String auxGuidelines = element.get('dose padrão e orientações');
+      List<String> listGuidelines = auxGuidelines.split('|n');
+      auxGuidelines = listGuidelines.join('\n');
+
       medications.add(
         MedicationModel(
           name: element.get('nome'),
@@ -54,7 +63,7 @@ class MainController extends GetxController {
           adverseEffects: element.get('efeitos adversos mais comuns'),
           takeOnAnEmptyStomach: element.get('tomar em jejum?'),
           routeOfAdministration: element.get('via de administração'),
-          guidelines: element.get('dose padrão e orientações'),
+          guidelines: auxGuidelines,
           adjustDose: element
               .get('ajustar dose em pacientes renais, hepáticos e cardíacos?'),
           tradeNames: laboratories,
