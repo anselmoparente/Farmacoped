@@ -6,7 +6,7 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 class AdMobService {
   static String? get InterstitialAdUnitId {
     if (Platform.isAndroid) {
-      return 'ca-app-pub-3940256099942544/1033173712';
+      return 'ca-app-pub-1092157597274926/5936768758';
     }
 
     return null;
