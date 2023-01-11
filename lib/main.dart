@@ -15,9 +15,6 @@ Future<void> main() async {
     DeviceOrientation.portraitUp,
   ]);
   MobileAds.instance.initialize();
-  RequestConfiguration configuration =
-      RequestConfiguration(testDeviceIds: ['F7F0378E676883330748E9A75F0A34E0']);
-  MobileAds.instance.updateRequestConfiguration(configuration);
   await GetStorage.init();
   await Firebase.initializeApp();
   runApp(const MyApp());
