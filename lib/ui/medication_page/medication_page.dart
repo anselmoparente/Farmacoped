@@ -28,7 +28,7 @@ class MedicationPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  IconButton(
+                  TextButton(
                     onPressed: () {
                       launchUrl(
                         Uri.parse(
@@ -37,9 +37,30 @@ class MedicationPage extends StatelessWidget {
                         mode: LaunchMode.inAppWebView,
                       );
                     },
-                    icon: Icon(
-                      Icons.travel_explore,
-                      color: Colors.white,
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 4.0,
+                        horizontal: 4.0,
+                      ),
+                    ),
+                    child: Wrap(
+                      crossAxisAlignment: WrapCrossAlignment.center,
+                      spacing: 4,
+                      children: [
+                        Text(
+                          'Link Anvisa',
+                          style: const TextStyle(
+                            fontSize: 18,
+                            color: Colors.deepPurple,
+                          ),
+                        ),
+                        const Icon(
+                          Icons.arrow_forward_ios,
+                          size: 18,
+                          color: Colors.deepPurple,
+                        ),
+                      ],
                     ),
                   ),
                   Obx(
