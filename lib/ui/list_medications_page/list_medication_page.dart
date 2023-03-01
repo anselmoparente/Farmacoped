@@ -67,82 +67,96 @@ class ListMedicationPage extends GetView<ListMedicationController> {
           ),
           Expanded(
             child: Obx(
-              () => ListView.builder(
-                itemCount: controller.medicationsSearch.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return GestureDetector(
-                    onTap: () => Get.toNamed(
-                      Routes.MEDICATION,
-                      arguments: controller.medicationsSearch[index],
-                    ),
-                    child: Container(
-                      height: 64,
-                      margin: EdgeInsets.symmetric(
-                        horizontal: Get.width * 0.05,
-                        vertical: 8.0,
-                      ),
-                      decoration: BoxDecoration(
-                        color: controller.medicationsSearch[index].type ==
-                                'Antibiótico'
-                            ? Colors.blueAccent
-                            : controller.medicationsSearch[index].type ==
-                                    'Anti-inflamatório'
-                                ? Colors.pinkAccent
-                                : controller.medicationsSearch[index].type ==
-                                        'Anestésico'
-                                    ? Colors.deepOrange
-                                    : Colors.greenAccent,
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(24.0),
-                        ),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Color.fromARGB(255, 186, 186, 186),
-                            blurRadius: 5.0,
-                            spreadRadius: 2.0,
-                            offset: Offset(0.0, 0.0),
-                          )
-                        ],
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 16.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.start,
+              () => controller.medicationsSearch.isNotEmpty
+                  ? ListView.builder(
+                      itemCount: controller.medicationsSearch.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return GestureDetector(
+                          onTap: () => Get.toNamed(
+                            Routes.MEDICATION,
+                            arguments: controller.medicationsSearch[index],
+                          ),
+                          child: Container(
+                            height: 64,
+                            margin: EdgeInsets.symmetric(
+                              horizontal: Get.width * 0.05,
+                              vertical: 8.0,
+                            ),
+                            decoration: BoxDecoration(
+                              color: controller.medicationsSearch[index].type ==
+                                      'Antibiótico'
+                                  ? Colors.blueAccent
+                                  : controller.medicationsSearch[index].type ==
+                                          'Anti-inflamatório'
+                                      ? Colors.pinkAccent
+                                      : controller.medicationsSearch[index]
+                                                  .type ==
+                                              'Anestésico'
+                                          ? Colors.deepOrange
+                                          : Colors.greenAccent,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(24.0),
+                              ),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Color.fromARGB(255, 186, 186, 186),
+                                  blurRadius: 5.0,
+                                  spreadRadius: 2.0,
+                                  offset: Offset(0.0, 0.0),
+                                )
+                              ],
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(
-                                  controller.medicationsSearch[index].name,
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold,
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 16.0),
+                                  child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        controller
+                                            .medicationsSearch[index].name,
+                                        style: const TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      Text(
+                                        controller
+                                            .medicationsSearch[index].type,
+                                        style: const TextStyle(
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
-                                Text(
-                                  controller.medicationsSearch[index].type,
-                                  style: const TextStyle(
+                                const Padding(
+                                  padding: EdgeInsets.only(right: 16.0),
+                                  child: Icon(
+                                    Icons.arrow_forward_ios,
                                     color: Colors.white,
                                   ),
-                                ),
+                                )
                               ],
                             ),
                           ),
-                          const Padding(
-                            padding: EdgeInsets.only(right: 16.0),
-                            child: Icon(
-                              Icons.arrow_forward_ios,
-                              color: Colors.white,
-                            ),
-                          )
-                        ],
+                        );
+                      },
+                    )
+                  : Center(
+                      child: Text(
+                        'empty_content'.tr,
+                        style:
+                            const TextStyle(color: Colors.grey, fontSize: 24),
+                        textAlign: TextAlign.center,
                       ),
                     ),
-                  );
-                },
-              ),
             ),
           ),
           SizedBox(
