@@ -32,4 +32,5 @@ final Map<String, String> pt = {
   'amount': 'Quanto vem em cada embalagem?',
   'composition': 'Composição (mg/ml):',
   'warnings': 'Atenção alérgicos e diabéticos!',
+  'analgesic': 'Analgésico',
 };
