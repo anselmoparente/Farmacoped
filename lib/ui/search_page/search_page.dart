@@ -91,14 +91,18 @@ class SearchPage extends GetView<MainController> {
                       decoration: BoxDecoration(
                         color: controller.medicationsSearch[index].type ==
                                 'Antibiótico'
-                            ? Colors.blueAccent
+                            ? Colors.lightBlue
                             : controller.medicationsSearch[index].type ==
                                     'Anti-inflamatório'
-                                ? Colors.pinkAccent
+                                ? Colors.blue.shade700
                                 : controller.medicationsSearch[index].type ==
-                                        'Anestésico'
-                                    ? Colors.deepOrange
-                                    : Colors.greenAccent,
+                                        'Analgésico'
+                                    ? Colors.deepPurple.shade400
+                                    : controller.medicationsSearch[index]
+                                                .type ==
+                                            'Anestésico'
+                                        ? Colors.purpleAccent.shade400
+                                        : Colors.deepOrange,
                         borderRadius: BorderRadius.all(
                           Radius.circular(24.0),
                         ),

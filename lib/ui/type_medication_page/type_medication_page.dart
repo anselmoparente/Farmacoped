@@ -30,7 +30,7 @@ class TypeMedicationPage extends GetView<MainController> {
             TypeMedication(
               title: 'antibiotics'.tr,
               image: 'assets/images/antibiotic_icon.png',
-              color: Colors.blueAccent,
+              color: Colors.lightBlue,
               onTap: () {
                 List<MedicationModel> typeMedications = [];
                 for (int i = 0; i < controller.medications.length; i++) {
@@ -44,7 +44,7 @@ class TypeMedicationPage extends GetView<MainController> {
             TypeMedication(
               title: 'anti_inflammatory'.tr,
               image: 'assets/images/anti_inflamatory_icon.png',
-              color: Colors.pinkAccent,
+              color: Colors.blue.shade700,
               onTap: () {
                 List<MedicationModel> typeMedications = [];
                 for (int i = 0; i < controller.medications.length; i++) {
@@ -56,9 +56,23 @@ class TypeMedicationPage extends GetView<MainController> {
               },
             ),
             TypeMedication(
+              title: 'analgesic'.tr,
+              image: 'assets/images/anestesy_icon.png',
+              color: Colors.deepPurple.shade400,
+              onTap: () {
+                List<MedicationModel> typeMedications = [];
+                for (int i = 0; i < controller.medications.length; i++) {
+                  if (controller.medications[i].type == 'Analgésico') {
+                    typeMedications.add(controller.medications[i]);
+                  }
+                }
+                Get.toNamed(Routes.LIST_MEDICATION, arguments: typeMedications);
+              },
+            ),
+            TypeMedication(
               title: 'anesthetics'.tr,
               image: 'assets/images/anestesy_icon.png',
-              color: Colors.deepOrange,
+              color: Colors.purpleAccent.shade400,
               onTap: () {
                 List<MedicationModel> typeMedications = [];
                 for (int i = 0; i < controller.medications.length; i++) {
@@ -72,7 +86,7 @@ class TypeMedicationPage extends GetView<MainController> {
             TypeMedication(
               title: 'antifungal'.tr,
               image: 'assets/images/antifungic_icon.png',
-              color: Colors.greenAccent,
+              color: Colors.deepOrange,
               onTap: () {
                 List<MedicationModel> typeMedications = [];
                 for (int i = 0; i < controller.medications.length; i++) {

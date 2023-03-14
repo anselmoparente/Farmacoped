@@ -40,15 +40,19 @@ class FavoritePage extends GetView<MainController> {
                         decoration: BoxDecoration(
                           color: controller.favoriteMedications[index].type ==
                                   'Antibiótico'
-                              ? Colors.blueAccent
+                              ? Colors.lightBlue
                               : controller.favoriteMedications[index].type ==
                                       'Anti-inflamatório'
-                                  ? Colors.pinkAccent
+                                  ? Colors.blue.shade700
                                   : controller.favoriteMedications[index]
                                               .type ==
-                                          'Anestésico'
-                                      ? Colors.deepOrange
-                                      : Colors.greenAccent,
+                                          'Analgésico'
+                                      ? Colors.deepPurple.shade400
+                                      : controller.favoriteMedications[index]
+                                                  .type ==
+                                              'Anestésico'
+                                          ? Colors.purpleAccent.shade400
+                                          : Colors.deepOrange,
                           borderRadius: BorderRadius.all(
                             Radius.circular(24.0),
                           ),
