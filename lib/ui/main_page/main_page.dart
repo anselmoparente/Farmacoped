@@ -1,5 +1,6 @@
 import 'package:farmacoped/services/ad_mob_service.dart';
 import 'package:farmacoped/ui/favorites_page/favorites_page.dart';
+import 'package:farmacoped/ui/information_page/information_page.dart';
 import 'package:farmacoped/ui/type_medication_page/type_medication_page.dart';
 import 'package:farmacoped/ui/search_page/search_page.dart';
 import 'package:flutter/material.dart';
@@ -44,6 +45,7 @@ class MainPage extends GetView<MainController> {
           const TypeMedicationPage(),
           const SearchPage(),
           const FavoritePage(),
+          const InformationPage(),
         ],
       ),
       bottomNavigationBar: Padding(
@@ -81,7 +83,7 @@ class MainPage extends GetView<MainController> {
                         MaterialStatePropertyAll<Color>(Colors.transparent),
                   ),
                   child: Icon(
-                    Icons.info_outline,
+                    Icons.home_outlined,
                     size: 28,
                     color: controller.currentPage == 0
                         ? Colors.deepPurple
@@ -120,6 +122,25 @@ class MainPage extends GetView<MainController> {
                   ),
                   child: Icon(
                     Icons.favorite_outline,
+                    size: 28,
+                    color: controller.currentPage == 2
+                        ? Colors.deepPurple
+                        : Colors.grey,
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    if (controller.currentPage != 3) {
+                      controller.currentPage = 3;
+                      pageController.jumpToPage(3);
+                    }
+                  },
+                  style: const ButtonStyle(
+                    overlayColor:
+                        MaterialStatePropertyAll<Color>(Colors.transparent),
+                  ),
+                  child: Icon(
+                    Icons.info_outline,
                     size: 28,
                     color: controller.currentPage == 2
                         ? Colors.deepPurple
