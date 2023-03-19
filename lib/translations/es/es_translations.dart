@@ -34,4 +34,5 @@ final Map<String, String> es = {
   'composition': 'Composición (mg/ml):',
   'warnings': '¡Atención Alergias y Diabéticos!',
   'analgesic': 'Analgésico',
+  'informations': 'Información',
 };
