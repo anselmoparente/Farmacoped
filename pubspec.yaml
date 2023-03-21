@@ -38,13 +38,14 @@ dependencies:
   flutter_launcher_icons: ^0.10.0
   url_launcher: ^6.1.6
   google_mobile_ads: ^2.2.0
+  flutter_svg: ^2.0.4
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
 flutter_icons:
-  image_path: "assets/images/icon_launcher.png"
+  image_path: "assets/images/icon_launcher_farmacoped.png"
   android: true
   ios: true
   # The "flutter_lints" package below contains a set of recommended lints to
