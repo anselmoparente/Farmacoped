@@ -72,49 +72,57 @@ class SearchPage extends GetView<MainController> {
           ),
           Expanded(
             child: Obx(
-              () => controller.medicationsSearch.isNotEmpty
-                  ? ListView.builder(
-                      itemCount: controller.medicationsSearch.length,
-                      itemBuilder: (BuildContext context, int index) {
-                        return GestureDetector(
-                          onTap: () {
-                            Get.toNamed(
-                              Routes.MEDICATION,
-                              arguments: controller.medicationsSearch[index],
-                            );
-                          },
-                          child: Container(
-                            height: 64,
-                            margin: EdgeInsets.symmetric(
-                              horizontal: Get.width * 0.05,
-                              vertical: 8.0,
-                            ),
-                            decoration: BoxDecoration(
-                              color: controller.medicationsSearch[index].type ==
-                                      'Antibiótico'
-                                  ? Colors.blueAccent
-                                  : controller.medicationsSearch[index].type ==
-                                          'Anti-inflamatório'
-                                      ? Colors.pinkAccent
-                                      : controller.medicationsSearch[index]
-                                                  .type ==
-                                              'Anestésico'
-                                          ? Colors.deepOrange
-                                          : Colors.greenAccent,
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(24.0),
-                              ),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Color.fromARGB(255, 186, 186, 186),
-                                  blurRadius: 5.0,
-                                  spreadRadius: 2.0,
-                                  offset: Offset(0.0, 0.0),
-                                )
-                              ],
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              () => ListView.builder(
+                itemCount: controller.medicationsSearch.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return GestureDetector(
+                    onTap: () {
+                      Get.toNamed(
+                        Routes.MEDICATION,
+                        arguments: controller.medicationsSearch[index],
+                      );
+                    },
+                    child: Container(
+                      height: 64,
+                      margin: EdgeInsets.symmetric(
+                        horizontal: Get.width * 0.05,
+                        vertical: 8.0,
+                      ),
+                      decoration: BoxDecoration(
+                        color: controller.medicationsSearch[index].type ==
+                                'Antibiótico'
+                            ? Colors.lightBlue
+                            : controller.medicationsSearch[index].type ==
+                                    'Anti-inflamatório'
+                                ? Colors.blue.shade700
+                                : controller.medicationsSearch[index].type ==
+                                        'Analgésico'
+                                    ? Colors.deepPurple.shade400
+                                    : controller.medicationsSearch[index]
+                                                .type ==
+                                            'Anestésico'
+                                        ? Colors.purpleAccent.shade400
+                                        : Colors.deepOrange,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(24.0),
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Color.fromARGB(255, 186, 186, 186),
+                            blurRadius: 5.0,
+                            spreadRadius: 2.0,
+                            offset: Offset(0.0, 0.0),
+                          )
+                        ],
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 16.0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.only(left: 16.0),

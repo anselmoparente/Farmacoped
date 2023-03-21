@@ -33,5 +33,7 @@ final Map<String, String> es = {
   'amount': '¿Cuánto hay en cada paquete?',
   'composition': 'Composición (mg/ml):',
   'warnings': '¡Atención Alergias y Diabéticos!',
+  'analgesic': 'Analgésico',
+  'informations': 'Información',
   'empty_content': '¡No se puede cargar el contenido, por favor compruebe su conexión!'
 };
