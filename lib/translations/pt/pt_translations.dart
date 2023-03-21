@@ -34,4 +34,5 @@ final Map<String, String> pt = {
   'warnings': 'Atenção alérgicos e diabéticos!',
   'analgesic': 'Analgésico',
   'informations': 'Informações',
+  'empty_content': 'Não foi possível carregar o conteúdo, verifique a sua conexão!'
 };

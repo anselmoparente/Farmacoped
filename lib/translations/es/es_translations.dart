@@ -35,4 +35,5 @@ final Map<String, String> es = {
   'warnings': '¡Atención Alergias y Diabéticos!',
   'analgesic': 'Analgésico',
   'informations': 'Información',
+  'empty_content': '¡No se puede cargar el contenido, por favor compruebe su conexión!'
 };
