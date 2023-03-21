@@ -71,108 +71,102 @@ class SearchPage extends GetView<MainController> {
             ),
           ),
           Expanded(
-            child: Obx(
-              () => ListView.builder(
-                itemCount: controller.medicationsSearch.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return GestureDetector(
-                    onTap: () {
-                      Get.toNamed(
-                        Routes.MEDICATION,
-                        arguments: controller.medicationsSearch[index],
-                      );
-                    },
-                    child: Container(
-                      height: 64,
-                      margin: EdgeInsets.symmetric(
-                        horizontal: Get.width * 0.05,
-                        vertical: 8.0,
-                      ),
-                      decoration: BoxDecoration(
-                        color: controller.medicationsSearch[index].type ==
-                                'Antibiótico'
-                            ? Colors.lightBlue
-                            : controller.medicationsSearch[index].type ==
-                                    'Anti-inflamatório'
-                                ? Colors.blue.shade700
-                                : controller.medicationsSearch[index].type ==
-                                        'Analgésico'
-                                    ? Colors.deepPurple.shade400
-                                    : controller.medicationsSearch[index]
-                                                .type ==
-                                            'Anestésico'
-                                        ? Colors.purpleAccent.shade400
-                                        : Colors.deepOrange,
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(24.0),
-                        ),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Color.fromARGB(255, 186, 186, 186),
-                            blurRadius: 5.0,
-                            spreadRadius: 2.0,
-                            offset: Offset(0.0, 0.0),
-                          )
-                        ],
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 16.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 16.0),
-                                  child: Column(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        controller
-                                            .medicationsSearch[index].name,
-                                        style: const TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                      Text(
-                                        controller
-                                            .medicationsSearch[index].type,
-                                        style: const TextStyle(
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                const Padding(
-                                  padding: EdgeInsets.only(right: 16.0),
-                                  child: Icon(
-                                    Icons.arrow_forward_ios,
-                                    color: Colors.white,
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
+            child: Obx(() => ListView.builder(
+                  itemCount: controller.medicationsSearch.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return GestureDetector(
+                      onTap: () {
+                        Get.toNamed(
+                          Routes.MEDICATION,
+                          arguments: controller.medicationsSearch[index],
                         );
                       },
-                    )
-                  : Center(
-                      child: Text(
-                        'empty_content'.tr,
-                        style:
-                            const TextStyle(color: Colors.grey, fontSize: 24),
-                        textAlign: TextAlign.center,
+                      child: Container(
+                        height: 64,
+                        margin: EdgeInsets.symmetric(
+                          horizontal: Get.width * 0.05,
+                          vertical: 8.0,
+                        ),
+                        decoration: BoxDecoration(
+                          color: controller.medicationsSearch[index].type ==
+                                  'Antibiótico'
+                              ? Colors.lightBlue
+                              : controller.medicationsSearch[index].type ==
+                                      'Anti-inflamatório'
+                                  ? Colors.blue.shade700
+                                  : controller.medicationsSearch[index].type ==
+                                          'Analgésico'
+                                      ? Colors.deepPurple.shade400
+                                      : controller.medicationsSearch[index]
+                                                  .type ==
+                                              'Anestésico'
+                                          ? Colors.purpleAccent.shade400
+                                          : Colors.deepOrange,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(24.0),
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color.fromARGB(255, 186, 186, 186),
+                              blurRadius: 5.0,
+                              spreadRadius: 2.0,
+                              offset: Offset(0.0, 0.0),
+                            )
+                          ],
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 16.0),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 16.0),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          controller
+                                              .medicationsSearch[index].name,
+                                          style: const TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        Text(
+                                          controller
+                                              .medicationsSearch[index].type,
+                                          style: const TextStyle(
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  const Padding(
+                                    padding: EdgeInsets.only(right: 16.0),
+                                    child: Icon(
+                                      Icons.arrow_forward_ios,
+                                      color: Colors.white,
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-            ),
+                    );
+                  },
+                )),
           ),
           SizedBox(
             height: 16.0,

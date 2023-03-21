@@ -154,17 +154,12 @@ class ListMedicationPage extends GetView<ListMedicationController> {
                               ],
                             ),
                           ),
-                        );
-                      },
-                    )
-                  : Center(
-                      child: Text(
-                        'empty_content'.tr,
-                        style:
-                            const TextStyle(color: Colors.grey, fontSize: 24),
-                        textAlign: TextAlign.center,
+                        ],
                       ),
                     ),
+                  );
+                },
+              ),
             ),
           ),
           SizedBox(
