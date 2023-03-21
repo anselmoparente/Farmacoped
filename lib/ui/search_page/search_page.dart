@@ -124,43 +124,30 @@ class SearchPage extends GetView<MainController> {
                                     MainAxisAlignment.spaceEvenly,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 16.0),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          controller
-                                              .medicationsSearch[index].name,
-                                          style: const TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 18,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                        Text(
-                                          controller
-                                              .medicationsSearch[index].type,
-                                          style: const TextStyle(
-                                            color: Colors.white,
-                                          ),
-                                        ),
-                                      ],
+                                  Text(
+                                    controller.medicationsSearch[index].name,
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                  const Padding(
-                                    padding: EdgeInsets.only(right: 16.0),
-                                    child: Icon(
-                                      Icons.arrow_forward_ios,
+                                  Text(
+                                    controller.medicationsSearch[index].type,
+                                    style: const TextStyle(
                                       color: Colors.white,
                                     ),
-                                  )
+                                  ),
                                 ],
                               ),
                             ),
+                            const Padding(
+                              padding: EdgeInsets.only(right: 16.0),
+                              child: Icon(
+                                Icons.arrow_forward_ios,
+                                color: Colors.white,
+                              ),
+                            )
                           ],
                         ),
                       ),
