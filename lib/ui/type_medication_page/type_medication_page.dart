@@ -29,7 +29,7 @@ class TypeMedicationPage extends GetView<MainController> {
           children: [
             TypeMedication(
               title: 'antibiotics'.tr,
-              image: 'assets/images/antibiotic_icon.png',
+              image: 'assets/images/antibiotic_icon.svg',
               color: Colors.lightBlue,
               onTap: () {
                 List<MedicationModel> typeMedications = [];
@@ -43,7 +43,7 @@ class TypeMedicationPage extends GetView<MainController> {
             ),
             TypeMedication(
               title: 'anti_inflammatory'.tr,
-              image: 'assets/images/anti_inflamatory_icon.png',
+              image: 'assets/images/anti_inflamatory_icon.svg',
               color: Colors.blue.shade700,
               onTap: () {
                 List<MedicationModel> typeMedications = [];
@@ -57,7 +57,7 @@ class TypeMedicationPage extends GetView<MainController> {
             ),
             TypeMedication(
               title: 'analgesic'.tr,
-              image: 'assets/images/anestesy_icon.png',
+              image: 'assets/images/analgesic_icon.svg',
               color: Colors.deepPurple.shade400,
               onTap: () {
                 List<MedicationModel> typeMedications = [];
@@ -71,7 +71,7 @@ class TypeMedicationPage extends GetView<MainController> {
             ),
             TypeMedication(
               title: 'anesthetics'.tr,
-              image: 'assets/images/anestesy_icon.png',
+              image: 'assets/images/anestesy_icon.svg',
               color: Colors.purpleAccent.shade400,
               onTap: () {
                 List<MedicationModel> typeMedications = [];
@@ -85,7 +85,7 @@ class TypeMedicationPage extends GetView<MainController> {
             ),
             TypeMedication(
               title: 'antifungal'.tr,
-              image: 'assets/images/antifungic_icon.png',
+              image: 'assets/images/antifungic_icon.svg',
               color: Colors.deepOrange,
               onTap: () {
                 List<MedicationModel> typeMedications = [];

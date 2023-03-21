@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class TypeMedication extends StatelessWidget {
   final String title;
@@ -44,17 +45,15 @@ class TypeMedication extends StatelessWidget {
                 padding: EdgeInsets.only(left: Get.width * 0.05),
                 child: Container(
                   padding: EdgeInsets.all(8.0),
+                  width: Get.height * 0.1,
+                  height: Get.height * 0.1,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.all(
                       Radius.circular(24.0),
                     ),
                   ),
-                  child: Image.asset(
-                    image,
-                    width: 75,
-                    height: 75,
-                  ),
+                  child: SvgPicture.asset(image),
                 ),
               ),
               Padding(
