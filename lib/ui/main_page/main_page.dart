@@ -142,7 +142,7 @@ class MainPage extends GetView<MainController> {
                   child: Icon(
                     Icons.info_outline,
                     size: 28,
-                    color: controller.currentPage == 2
+                    color: controller.currentPage == 3
                         ? Colors.deepPurple
                         : Colors.grey,
                   ),

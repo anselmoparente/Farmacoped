@@ -12,6 +12,6 @@ import GoogleMobileAds
     FirebaseApp.configure()
     GADMobileAds.sharedInstance().start(completionHandler: nil)
     GeneratedPluginRegistrant.register(with: self)
-    return super.application(application, didFinishLaunchingWithOptions: launchOptions)
+    return super.application(application, didFinishLaunchingWithOptions: launchOptions) 
   }
 }
