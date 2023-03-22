@@ -86,7 +86,7 @@ class TypeMedicationPage extends GetView<MainController> {
             TypeMedication(
               title: 'antifungal'.tr,
               image: 'assets/images/antifungic_icon.svg',
-              color: Colors.deepOrange,
+              color: Color.fromARGB(255, 244, 135, 217),
               onTap: () {
                 List<MedicationModel> typeMedications = [];
                 for (int i = 0; i < controller.medications.length; i++) {

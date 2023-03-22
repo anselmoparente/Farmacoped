@@ -101,7 +101,7 @@ class SearchPage extends GetView<MainController> {
                                                   .type ==
                                               'Anestésico'
                                           ? Colors.purpleAccent.shade400
-                                          : Colors.deepOrange,
+                                          : Color.fromARGB(255, 244, 135, 217),
                           borderRadius: BorderRadius.all(
                             Radius.circular(24.0),
                           ),
