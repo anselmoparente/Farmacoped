@@ -14,7 +14,10 @@ class ItemInformation extends StatelessWidget {
               CircleAvatar(),
               Column(
                 children: [
-                  Text('Anselmo Parente Martins'),
+                  Text(
+                    'Anselmo Parente Martins',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
                   Container(
                     height: 500,
                     width: Get.width * 0.8,
