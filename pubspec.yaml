@@ -39,6 +39,7 @@ dependencies:
   url_launcher: ^6.1.6
   google_mobile_ads: ^2.2.0
   flutter_svg: ^2.0.4
+  auto_size_text: ^3.0.0
 
 dev_dependencies:
   flutter_test:

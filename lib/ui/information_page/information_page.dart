@@ -12,6 +12,11 @@ class InformationPage extends StatelessWidget {
         centerTitle: true,
         title: Text('informations'.tr),
         backgroundColor: Colors.deepPurple,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.elliptical(Get.width, 48.0),
+          ),
+        ),
       ),
       body: ListView.builder(
         itemCount: 5,
