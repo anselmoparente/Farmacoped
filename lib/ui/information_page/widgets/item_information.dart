@@ -28,7 +28,7 @@ class ItemInformation extends StatelessWidget {
               children: [
                 CircleAvatar(
                   child: Image.asset(
-                    'assets/images/splash_icon.png',
+                    image,
                   ),
                 ),
                 Text(name, style: TextStyle(fontWeight: FontWeight.bold)),

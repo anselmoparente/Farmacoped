@@ -21,10 +21,10 @@ class InformationPage extends StatelessWidget {
         'Advogada e, atualmente, acadêmica do 10º semestre de Odontologia na Universidade de Fortaleza - Unifor, participo da Liga Nacional Acadêmica da ABOPED desde 2020. Fui monitora da disciplina de Clínica Infantil II durante os anos de 2020 a 2022.',
       ],
       'images': [
-        'scasc',
-        'dvkhadiova',
-        'avavava',
-        'evvdsd',
+        'assets/images/splash_icon.png',
+        'assets/images/splash_icon.png',
+        'assets/images/splash_icon.png',
+        'assets/images/splash_icon.png',
       ],
     };
 
