@@ -22,18 +22,18 @@ class ItemInformation extends StatelessWidget {
       child: Container(
         width: Get.width * 0.8,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                CircleAvatar(
-                  child: Image.asset(
-                    image,
-                  ),
-                ),
-                Text(name, style: TextStyle(fontWeight: FontWeight.bold)),
-              ],
+            Container(
+              width: Get.height * 0.5,
+              height: Get.height * 0.5,
+              child: Image.asset(
+                image,
+              ),
             ),
+            SizedBox(height: 10),
+            Text(name, style: TextStyle(fontSize: 18 ,fontWeight: FontWeight.bold)),
+            SizedBox(height: 10),
             Container(
               height: 200,
               child: AutoSizeText(information),
