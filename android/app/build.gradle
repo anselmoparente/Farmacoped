@@ -47,8 +47,8 @@ android {
         applicationId "com.phoenix.farmacoped"
         minSdkVersion 21
         targetSdkVersion flutter.targetSdkVersion
-        versionCode 4
-        versionName '1.3'
+        versionCode 5
+        versionName '1.4'
     }
 
     buildTypes {
