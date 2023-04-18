@@ -79,7 +79,7 @@ class FavoritePage extends GetView<MainController> {
                                     controller.favoriteMedications[index].name,
                                     style: const TextStyle(
                                       color: Colors.white,
-                                      fontSize: 18,
+                                      fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
