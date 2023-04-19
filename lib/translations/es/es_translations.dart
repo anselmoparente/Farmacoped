@@ -35,5 +35,6 @@ final Map<String, String> es = {
   'warnings': '¡Atención Alergias y Diabéticos!',
   'analgesic': 'Analgésico',
   'informations': 'Información',
-  'empty_content': '¡No se puede cargar el contenido, por favor compruebe su conexión!'
+  'empty_content': '¡No se puede cargar el contenido, por favor compruebe su conexión!',
+  'medication_warning': 'Es importante recordar que cualquier información proporcionada no reemplaza la opinión u orientación médica profesional. Si tiene alguna preocupación acerca de su salud, es importante que busque asesoramiento médico profesional antes de tomar cualquier decisión relacionada con su bienestar.',
 };

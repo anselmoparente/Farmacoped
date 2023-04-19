@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:farmacoped/controllers/main_controller.dart';
 import 'package:farmacoped/routes/app_pages.dart';
 import 'package:farmacoped/ui/medication_page/widgets/medication_expansion_tile.dart';
@@ -21,7 +22,7 @@ class MedicationPage extends StatelessWidget {
         title: Text(Get.arguments.name),
         backgroundColor: Colors.deepPurple,
         bottom: PreferredSize(
-          preferredSize: Size.fromHeight(Get.height * 0.1),
+          preferredSize: Size.fromHeight(100),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -150,6 +151,14 @@ class MedicationPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              Container(
+                width: Get.width,
+                height: Get.height * 0.1,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: AutoSizeText('medication_warning'.tr),
+                ),
+              ),
               MedicationExpansionTile(
                 title: 'indicated_age'.tr,
                 content: Get.arguments.indicatedAge,
