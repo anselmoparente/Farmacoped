@@ -173,7 +173,7 @@ class MedicationPage extends StatelessWidget {
               ),
               if (Get.arguments.takeOnAnEmptyStomach != '')
                 MedicationExpansionTile(
-                  title: 'adverse_effects'.tr,
+                  title: 'take_empty'.tr,
                   content: Get.arguments.takeOnAnEmptyStomach,
                 ),
               MedicationExpansionTile(
