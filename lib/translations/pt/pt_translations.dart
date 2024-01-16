@@ -25,7 +25,7 @@ final Map<String, String> pt = {
   'indicated_age': 'Idade indicada',
   'contraindications': 'Contraindicações',
   'adverse_effects': 'Efeitos adversos mais comuns',
-  'take_empty': 'Tomar em jeum?',
+  'take_empty': 'Tomar em jejum?',
   'route_administration': 'Via de administração',
   'guidelines': 'Dosagem e orientações',
   'adjust_dose': 'Ajustar dose em pacientes renais, hepáticos e cardíacos?',
