@@ -1,4 +1,4 @@
-package com.example.farmacoped
+package com.phoenix.farmacoped
 
 import io.flutter.embedding.android.FlutterActivity
 
