@@ -38,8 +38,8 @@ android {
         applicationId "com.phoenix.farmacoped"
         minSdkVersion 23
         targetSdkVersion flutter.targetSdkVersion
-        versionCode 7
-        versionName '1.6'
+        versionCode 8
+        versionName '1.7'
     }
 
     buildTypes {
@@ -54,7 +54,8 @@ flutter {
 }
 
 dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation platform('com.google.firebase:firebase-bom:32.2.0')
-     implementation 'com.google.firebase:firebase-analytics-ktx:21.3.0'
+    implementation 'com.google.firebase:firebase-analytics-ktx:21.3.0'
     implementation 'com.google.android.gms:play-services-ads:22.3.0'
 }
